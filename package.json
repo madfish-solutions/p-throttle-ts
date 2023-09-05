@@ -1,53 +1,59 @@
 {
-	"name": "p-throttle",
-	"version": "5.1.0",
-	"description": "Throttle promise-returning & async functions",
-	"license": "MIT",
-	"repository": "sindresorhus/p-throttle",
-	"funding": "https://github.com/sponsors/sindresorhus",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
-	},
-	"type": "module",
-	"exports": "./index.js",
-	"engines": {
-		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-	},
-	"scripts": {
-		"test": "xo && ava && tsd"
-	},
-	"files": [
-		"index.js",
-		"index.d.ts"
-	],
-	"keywords": [
-		"promise",
-		"throttle",
-		"throat",
-		"limit",
-		"limited",
-		"interval",
-		"rate",
-		"batch",
-		"ratelimit",
-		"queue",
-		"discard",
-		"async",
-		"await",
-		"promises",
-		"time",
-		"out",
-		"cancel",
-		"bluebird"
-	],
-	"devDependencies": {
-		"ava": "^3.15.0",
-		"delay": "^5.0.0",
-		"in-range": "^3.0.0",
-		"time-span": "^5.0.0",
-		"tsd": "^0.17.0",
-		"xo": "^0.45.0"
-	}
+  "name": "@madfish-solutions/p-throttle-ts",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Inokentii Mazhara",
+  "main": "dist/index.js",
+  "module": "dist/p-throttle-ts.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=12"
+  },
+  "size-limit": [
+    {
+      "path": "dist/p-throttle-ts.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/p-throttle-ts.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.6",
+    "@tsconfig/recommended": "^1.0.2",
+    "dts-cli": "^2.0.3",
+    "husky": "^8.0.3",
+    "size-limit": "^8.2.6",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
 }

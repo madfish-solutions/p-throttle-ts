@@ -1,4 +1,4 @@
-# p-throttle
+# @madfish-solutions/p-throttle-ts
 
 > [Throttle](https://css-tricks.com/debouncing-throttling-explained-examples/) promise-returning & async functions
 
@@ -6,10 +6,12 @@ It also works with normal functions.
 
 Useful for rate limiting calls to an external API, for example.
 
+This module is [p-throttle](https://www.npmjs.com/package/p-throttle) rewritten to Typescript to make its integration into projects easier.
+
 ## Install
 
 ```sh
-npm install p-throttle
+npm install @madfish-solutions/p-throttle-ts
 ```
 
 ## Usage
@@ -17,7 +19,7 @@ npm install p-throttle
 Here, the throttled function is only called twice a second:
 
 ```js
-import pThrottle from 'p-throttle';
+import pThrottle from '@madfish-solutions/p-throttle-ts';
 
 const now = Date.now();
 
